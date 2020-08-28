@@ -25,7 +25,7 @@ responses:
   utter_happy:
   - text: Great, carry on!
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am ESC driven Bot created by i-Yantra team.
   utter_name:
   - text: My name is Vishesh, Hope you like it
   utter_manager_cybersoc:
