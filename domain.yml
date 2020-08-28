@@ -1,0 +1,50 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- mood_unhappy
+- ask_question
+- deny
+- greet
+- goodbye
+- affirm
+- mood_great
+- bot_challenge
+- ask_About_CyberSOC
+- ask_About_SDWAN
+responses:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: My name is Vishesh, Hope you like it
+  utter_manager_cybersoc:
+  - text: Rohan is the {position} of CyberSOC India team
+  utter_manager_sdwan:
+  - text: Amit is the {position} of SDWAN
+  utter_cannot_understand:
+    - text: Which domain's manager you want to know.
+actions:
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_name
+- utter_manager_cybersoc
+- utter_manager_sdwan
+- utter_cannot_understand
+entities:
+  - position
+  - domain
+slots:
+  position:
+    type: text
