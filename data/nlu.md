@@ -62,6 +62,7 @@
 - What is your name
 - Can I know your name
 - How can I call you
+- What's ur name
 
 
 ## intent:ask_About_CyberSOC
