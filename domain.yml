@@ -12,6 +12,14 @@ intents:
 - bot_challenge
 - ask_About_CyberSOC
 - ask_About_SDWAN
+- ask_about_esc
+- ask_about_esc_offerings
+entities:
+- position
+- domain
+slots:
+  position:
+    type: text
 responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
@@ -25,26 +33,20 @@ responses:
   utter_happy:
   - text: Great, carry on!
   utter_iamabot:
-  - text: I am a Bot for ESC created by i-Yantra team.
+  - text: I am a virtual assistant, prepared by iYantra team for ESC domain
   utter_name:
-  - text: My name is Vishesh, Hope you like it
-  utter_manager_cybersoc:
-  - text: Rohan is the {position} of CyberSOC India team
-  utter_manager_sdwan:
-  - text: Amit is the {position} of SDWAN
-  utter_cannot_understand:
-    - text: Which domain's manager you want to know.
+  - text: My name is ESC assistant, Hope you like it
+  utter_ask_about_esc:
+  - text: Expertise & Solution Centre (ESC) is the CSO expertise center & integrator reference point, supplementing FBO and IBO. It is responsible for providing our customers with end-to-end integration of their solutions and services.
+  utter_ask_about_esc_offerings:
+  - text: ESC Team in India supports UCC, Voice, Video, Contact Center, Network and Cyber Security Operations and provides expertise in product and process development.
+  utter_default:
+  - text: Sorry, I could not understand your meaning, can you please rephrase. It
+      will help me to learn.
 actions:
 - utter_cheer_up
 - utter_did_that_help
 - utter_goodbye
 - utter_name
-- utter_manager_cybersoc
-- utter_manager_sdwan
-- utter_cannot_understand
-entities:
-  - position
-  - domain
-slots:
-  position:
-    type: text
+- utter_ask_about_esc
+- utter_ask_about_esc_offerings
