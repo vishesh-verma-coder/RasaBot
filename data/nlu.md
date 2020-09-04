@@ -57,24 +57,26 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+- Who are you
 
 ## intent:ask_question
 - What is your name
 - Can I know your name
 - How can I call you
-- What's ur name
 
-
-## intent:ask_About_CyberSOC
-- Who is [manager](position) of [CyberSOC](domain) in ESC
-- Who is [heading]("entity":"position","value":"manager") [cybersoc](domain) team
-
-## intent:ask_About_SDWAN
-- Who is [manager](position) of [SDWAN](domain) in ESC
-- Who is [heading]("entity":"position","value":"manager") [SDWAN](domain) team
-
-## synonym:manager
-- leading
-- heading
-- mgr
-- head
+## intent:ask_about_esc
+ - What is ESC?
+ - What is ESC
+ - What's ESC?
+ - What do you mean by ESC?
+ - What do you understand from ESC?
+ - What is full form of ESC?
+ 
+## intent:ask_about_esc_offerings
+ - What are services offered in ESC?
+ - What are ESC offerings?
+ - What services are supported in ESC?
+ - What services come under ESC?
+ - What services come under ESC scope?
+ - What are the offerings in ESC department?
+ - What are the services in ESC department?

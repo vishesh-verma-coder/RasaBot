@@ -50,17 +50,10 @@
 * deny
     - utter_goodbye
     
-##manager_story_SDWAN_with_NO_domain_provided
-*ask_About_SDWAN
- - utter_cannot_understand
- 
-##manager_story_HP
-*ask_About_CyberSOC{"position":"manager","domain":"CyberSOC"}
- - utter_manager_cybersoc
- - slot{"position":"manager"}
- 
-##manager_story_SDWAN_with_domain_provided
-*ask_About_SDWAN{"position":"manager","domain":"SDWAN"}
- - utter_manager_sdwan
- - slot{"position":"manager"}
- 
+##ask_about_esc
+* ask_about_esc
+ - utter_ask_about_esc
+
+##ask_about_esc_offerings
+* ask_about_esc_offerings
+ - utter_ask_about_esc_offerings
