@@ -10,16 +10,8 @@ intents:
 - affirm
 - mood_great
 - bot_challenge
-- ask_About_CyberSOC
-- ask_About_SDWAN
 - ask_about_esc
 - ask_about_esc_offerings
-entities:
-- position
-- domain
-slots:
-  position:
-    type: text
 responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
