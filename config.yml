@@ -13,17 +13,19 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper
-  - name: ResponseSelector
+ # - name: ResponseSelector
+  #  retrieval_intent: chitchat
+   # scale_loss: false
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
-    max_history: 5
+    max_history: 6
     epochs: 100
   - name: MappingPolicy
   - name: FallbackPolicy
     nlu_threshold: 0.5
-    core_threshold: 0.4
+    core_threshold: 0.5
     fallback_action_name: "action_default_fallback"
