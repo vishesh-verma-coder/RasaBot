@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESC Portal</title>
+  <base href=".">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/ESC_LOGO.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  
+    .section-header {
+    margin-bottom: 30px;
+  }
+
+  #services {
+    padding: 30px 0 0 0;
+  }
+  
+  #services .box {
+    padding: 10px;
+    margin-bottom: 40px;
+    /* box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1); */
+    box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+    background: #fff;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+
+  #services .box h4 {
+    margin-left: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+a {
+    color:#fff;
+    text-decoration:none;
+    background-color:transparent;
+    outline:0
+}
+
+a:hover {
+    color:#fff;
+    text-decoration:none;
+    background-color:transparent;
+    outline:0
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+img {
+    vertical-align: middle;
+    padding-bottom: 15px;
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+.dropdown-content[_ngcontent-c1] {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.row {
+    margin-right: 0px;
+    margin-left: -0;
+}
+
+.dropdown-content[_ngcontent-c1] a[_ngcontent-c1]:hover {
+    background-color: rgb(255, 120, 0);
+}
+
+.slider-size {
+    height: 200px; 
+  }
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  margin-top: -50px;
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+  }
+
+.fr-sticky-on{position:fixed}
+
+.navbar-default .navbar-nav>li>a {
+  color: white
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  color: #ff7800;
+  background-color: transparent
+}
+
+@media (min-width:768px) {
+  .navbar {
+    border-radius: 0px
+  }
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: #ff7800;
+  border-color: #ff7800
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: -2px
+}
+
+.has-error .form-control:focus {
+  border-color: #FF7900;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483
+}
+
+.form-control:focus {
+  border-color: #ff7800;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #ff7800;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px transparent
+}
+
+.form-control {
+  display: inline-block;
+  width: 18%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: white
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: center;
+  text-align: center;
+  border-top: 1px solid #ddd
+}
+
+table {
+  background-color: #f9f9f9
+}
+
+@media (min-width:1200px) {
+  .container {
+    width: 1340px
+  }
+}
+
+abbr[data-original-title],
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #777
+}
+
+a {
+  color: #FF6600;
+  text-decoration: none
+}
+
+  
+  
+  
+  </style>
+</head>
+<body>
+
+<div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "ESC Assistant",
+    subtitle: "Ask me anything related to ESC...",
+    params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+  })
+</script>
+<div style="background-color: black;">
+  <div class="row">
+    <div class="col-md-7 col-lg-7" style="margin-top: 10px;">
+      <a href="" routerLink="/home" title="ESC_LOGO">
+        <img src="assets/ESC_LOGO.png" alt="ESC_LOGO" style="margin-top: -25px; margin-left: -10px;">&nbsp;
+        <span style="color: white; font-weight: 100; font-size: 60px; font-family: Helvetica Neue;">
+          ESC
+        </span>
+      </a>
+      <div style="margin-top: -40px; color: #ff7800; margin-left: -10px; margin-bottom: 5px;">
+        Expertise and Solution Center
+        <span style="margin-left: 420px; color: #ff7800; font-size: 30px; text-align: center; font-weight: 100;">
+          ESC Portal
+        </span>
+      </div>
+
+    </div>
+    <div *ngIf="this.unlockFlag" class="col-md-5 col-lg-5" style="margin-top: 70px;">
+      <div style="float: right;">
+        <!-- <a onmouseover="this.style.color='#FF7900';" onmouseout="this.style.color='#FFFFFF';" data-toggle="modal"
+          href="" (click)="openLoginModal();">Log In</a> &nbsp; <span style="color:white">|</span> &nbsp; -->
+        <a onmouseover="this.style.color='#FF7900';" onmouseout="this.style.color='#FFFFFF';" data-toggle="modal"
+          href="" (click)="logout();">Logout</a>
+      </div>
+    </div>
+    <!-- <div class="col-xs-8" style="padding-top: 10px; text-align: right;">
+      <a href=""><b style="color: #ff7800;">Vedanshu Shukla</b></a>&nbsp; 
+      <span style="color: white">|</span>&nbsp;
+      <a href="" style="color: #ff7800;">ESC India</a>&nbsp; 
+      <span style="color: white">|</span>&nbsp;
+      <a href="" style="color: #ff7800;">My Subscription</a>
+    </div> -->
+    <!-- <div class="col-md-8 col-lg-8" style="color: #ff7800; font-size: 30px; text-align: center; font-weight: 100;"> 
+      ESC Portal
+  </div> -->
+  </div>
+  <div>
+    <nav class="navbar navbar-default" style="background-color: black; border-color: #191919;">
+      <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+        <div class="collapse navbar-collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="!unlockFlag">
+              <a routerLink="/login" class="dropdown-toggle" role="button"> Login </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="!unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="!unlockFlag">
+              <a routerLink="/register" class="dropdown-toggle" role="button"> Sign Up </a>
+            </li>
+          </ul> -->
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="unlockFlag">
+              <a routerLink="/home" class="dropdown-toggle" role="button"> Home </a>
+            </li>
+          </ul>
+          <!-- <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ESC_PDL') != -1) || 
+            (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) ||
+            (userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) ||
+            (userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_VDO') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul> -->
+         
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ESC_PDL') != -1) || 
+            (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) ||
+            (userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) ||
+            (userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_VDO') != -1) ||
+            (userRoles.indexOf('ROLE_UDD_HNDOVR') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ESC_PDL') != -1) || 
+            (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) ||
+            (userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) ||
+            (userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_VDO') != -1) ||
+            (userRoles.indexOf('ROLE_UDD_HNDOVR') != -1) || (userRoles.indexOf('ROLE_TSC_HNDOVR') != -1))
+            && unlockFlag">
+              <a class="dropdown-toggle"> Incident Mgt </a>
+              <div class="dropdown-content">
+                <a *ngIf="(userRoles.indexOf('ROLE_ESC_PDL') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">ESC PDL</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Program and Project Management</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Unified Communication & Collaboration</a>
+                <a routerLink="/incident-management" *ngIf="(userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Contact Center</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Security</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_VDO') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)"> Video</a>
+                <a routerLink="/incidentmanagement" *ngIf="(userRoles.indexOf('ROLE_UDD_HNDOVR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">UDD Handover</a>
+                <a routerLink="/tsc-handover" *ngIf="(userRoles.indexOf('ROLE_TSC_HNDOVR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">TSC Handover</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ESC_PDL') != -1) || 
+            (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) ||
+            (userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) ||
+            (userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_VDO') != -1) ||
+            (userRoles.indexOf('ROLE_TECH_ADV') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ESC_PDL') != -1) || 
+              (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) ||
+              (userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) ||
+              (userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_VDO') != -1) ||
+              (userRoles.indexOf('ROLE_TECH_ADV') != -1)) && unlockFlag">
+              <a class="dropdown-toggle"> Problem Mgt </a>
+              <div class="dropdown-content">
+                <a *ngIf="(userRoles.indexOf('ROLE_TECH_ADV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)" routerLink="/technical-advisory">Technical Advisory</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_ESC_PDL') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">ESC PDL</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_PRM_PRJ_DEV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Program and Project Management</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_UFD_CMM_CLBR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Unified Communication & Collaboration</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_CONTACT_CNTR') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Contact Center</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_SCRTY') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)">Security</a>
+                <a *ngIf="(userRoles.indexOf('ROLE_VDO') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)"> Video</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ODR_INV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_ODR_INV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a class="dropdown-toggle" role="button"> Order & Inventory Mgt </a>
+              <div class="dropdown-content">
+                <a routerLink="/sdx-order-inventory/viewdashboard">Order & Inventory
+                  Dashboard</a>
+                <!-- <a routerLink="/udd-sdwan/viewsdxinventorydashboard">SDX Inventory Dashboard</a>
+                <a routerLink="/udd-sdwan/view" (click)="getSdWanData()">UDD SD-WAN View Orders</a> -->
+                <!-- <a routerLink="/udd-sdwan/addcustomer" (click)="addSdWanCustomer()">Add Order Details</a> -->
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_TRNG') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_TRNG') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a routerLink="/trainings" class="dropdown-toggle" role="button"> Trainings </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_BUG_INV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_BUG_INV') != -1) || (userRoles.indexOf('ROLE_IOS_INV') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a class="dropdown-toggle" role="button">Databases </a>
+              <div class="dropdown-content">
+                <a routerLink="/bug-inventory">Bug Inventory</a>
+                <a routerLink="/ios-inventory">IOS Inventory</a>                
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_UCIE_BLD') != -1) || (userRoles.indexOf('ROLE_SDX_BLD') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a> | </a>
+            </li>
+          </ul>
+          <!-- <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_TRNG') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a routerLink="/build" class="dropdown-toggle" role="button"> Build </a>
+            </li>
+          </ul> -->
+          <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_UCIE_BLD') != -1) || (userRoles.indexOf('ROLE_SDX_BLD') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+              <a class="dropdown-toggle" role="button">Build </a>
+              <div class="dropdown-content">
+                <ng-container *ngIf="((userRoles.indexOf('ROLE_SDX_BLD') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+                    <a routerLink="/build">SDX-Build</a>
+                </ng-container>
+                
+                <ng-container *ngIf="((userRoles.indexOf('ROLE_UCIE_BLD') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+                    <a routerLink="/ucie-build">UCIE-Build</a>
+                </ng-container>
+                
+                
+                
+              </div>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+              <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_PJT_ASSIGN') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+                <a> | </a>
+              </li>
+            </ul>
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown"  *ngIf="((userRoles.indexOf('ROLE_PJT_ASSIGN') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag" >
+              <a class="dropdown-toggle" role="button">Project Assignment </a>
+              <div class="dropdown-content">
+                <ng-container *ngIf="((userRoles.indexOf('ROLE_PJT_ASSIGN') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1)) && unlockFlag">
+                
+                <a routerLink="/project-assignment">SDx Project Assignment</a>
+                </ng-container>
+                <!-- <a routerLink="/technical-advisory">Technical Advisory</a> -->
+                
+              </div>
+
+          </li>
+          </ul>
+          <ul class="nav navbar-nav">
+              <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_VNDR_MGMNT') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_VNDR_MGMNT_VIEW') != -1)) && unlockFlag">
+                <a> | </a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_VNDR_MGMNT') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_VNDR_MGMNT_VIEW') != -1)) && unlockFlag">
+                <a routerLink="/vendor-management" class="dropdown-toggle" role="button"> Vendor Management </a>
+              </li>
+            </ul>
+            <!-- <ul class="nav navbar-nav">
+              <li class="dropdown" *ngIf="((userRoles.indexOf('ROLE_VNDR_MGMNT') != -1) || (userRoles.indexOf('ROLE_ADMIN') != -1) || (userRoles.indexOf('ROLE_VNDR_MGMNT_VIEW') != -1)) && unlockFlag">
+                <a routerLink="/cisco-meraki-config" class="dropdown-toggle" role="button"> Cisco Meraki Config </a>
+              </li>
+            </ul> -->
+          <!-- <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="fa fa-sign-out" style="font-size: 20px; margin-left: 553px;" aria-hidden="true" onmouseover="this.style.color='#FF7900';" onmouseout="this.style.color='#FFFFFF';"></a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+  <div>
+  <section id="services" style="padding: 0px 0px 0px 0px; margin-top: 30px;">
+    <div class="container" style="width: inherit;">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="box wow fadeInRight">
+            <h4 class="title">Group Overview</h4>
+            <p class="description" style="font-family: Helvetica Neue;">
+              <a href="" routerLink="/" title="Group Overview">
+                <img src="assets/ESC.png" height="90" alt="Group Overview Image">
+              </a>
+              Expertise & Solution Centre (ESC) is the CSO expertise center & integrator reference point, supplementing FBO and IBO. It
+              is responsible for providing our customers with end-to-end integration of their solutions and services. ESC
+              team in India MSC supports UCC, Voice, Video, Contact Center and Security Operation and provides expertise
+              in product & process development working with OCD, OAB, OCB and UCC business units while ensuring overall consistency.
+              India MSC ESC will also be responsible for incubation of new services, such as SDN unified digital desk and
+              Technical Skill Center. The function is headed by Sanchita Biswas.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="box wow fadeInLeft">
+            <h4 class="title">Organization Chart</h4>
+            <p class="description"><img src="assets/orgChart.png" width='700' height='300'  alt="Group Overview Image"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding: 0px 0px 0px 0px;">
+    <div class="container" style="width: inherit;">
+      <div class="row box wow fadeInLeft" style="border-radius: 10px;">
+        <div style="font-weight: 500; font-size: 2rem; font-family: Helvetica Neue; text-align: center;">
+          ESC Offerings
+        </div>
+        <br>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" routerLink="/esc-pdl" target="_blank" title="ESC PDL (Product Development & LifeCycle) India">
+              <img src="assets/ESC PDL.jpg" height="140" alt="ESC_PDL Image">
+            </a>
+            <br>
+            <a href="" routerLink="/esc-pdl" target="_blank" style="color: #e23d39">
+              ESC PDL (Product Development & LifeCycle) India
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/program-project-management" title="Program and Project Management">
+              <img src="assets/PPM.png" height="100" alt="PPM Image">
+            </a>
+            <br>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/program-project-management" style="color: #e23d39">
+              Program and Project Management
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/communication-collaboration" title="Unified Communication and Collaboration">
+              <img src="assets/UCC.png" height="120" alt="UCC Image">
+            </a>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/communication-collaboration" style="color: #e23d39">
+              Unified Communication and Collaboration
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/contact-center" title="Contact Center">
+              <img src="assets/contact center.png" height="120" alt="Contact_Center Image">
+            </a>
+            <br>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/contact-center" style="color: #e23d39">
+              Contact Center
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/security" title="Security">
+              <img src="assets/security.png" height="100" alt="Security Image">
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/security" style="color: #e23d39">
+              Security
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/video" title="Video">
+              <img src="assets/video.png" height="140" alt="Video Image">
+            </a>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/video" style="color: #e23d39">
+              Video
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/sdn" title="sdn">
+              <img src="assets/sdn.png" style="margin-top: 20px;" height="80" alt="SDN Image">
+            </a>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/sdn" style="color: #e23d39">
+              SDN
+              <br> (Incubation Center)
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="box wow fadeInLeft" style="text-align: center; height: 220px; border-radius: 10px; background-color: rgb(250, 250, 250)">
+            <a href="" target="_blank" routerLink="/rewards&recognition" title="Rewards&Recognition">
+              <img src="assets/rewards.png" style="margin-top: 20px;" height="80" alt="Rewards & Recognition Image">
+            </a>
+            <br>
+            <br>
+            <a href="" target="_blank" routerLink="/rewards&recognition" style="color: #e23d39">
+              <span style="margin-top: 20px;">Rewards & Recognition</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<div class="row" style="background-color: black; padding: 21px 20px;">
+    <div class="col-md-5 col-lg-5">
+        <p style="font-size: 12px;color: white;">Orange Internal - © 2018</p>
+    </div>
+    <div class="col-md-4 col-lg-4">
+        <p style="font-size: 12px;color: white;margin-bottom: 0;margin-top: 0;">Contact:
+        <a style="color: #ff6600;">esc_sti_sai_ggn@list2.orange.com</a>
+    </div>
+    <!-- <div style="min-width: 175px;box-sizing: border-box;margin: 0px;display: inline-block; margin-right: auto;width: 49%; ">
+        <p style="font-size: 12px;line-height: 20px;color: white;min-height: 5px;margin-bottom: 0; margin-top: 0; text-align: center;margin-left:483px"></p>
+    </div>
+    <div style="min-width: 175px;box-sizing: border-box;margin-left: 370px;display: inline-block;width: 25%;">
+        <p style="font-size: 12px;line-height: 20px;color: white;min-height: 5px;margin-bottom: 0;margin-top: 0;">Contact:
+           
+        </p>
+    </div> -->
+</div>
+</body>
+</html>
