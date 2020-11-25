@@ -4,7 +4,7 @@ session_config:
 intents:
 - chitchat:
     use_entities: []
-- mood_unhappy
+- mood_unhappy_path
 - ask_question
 - deny
 - get_started
@@ -32,12 +32,22 @@ intents:
 - ask_about_sdn_button
 - ask_about_pdl_button
 - ask_about_ucc_button
+- ask_about_esc_button
 - ask_about_esc_plazza_and_esc_portalpage
 - ask_about_esc_shift_times
+- ask_about_esc_meraki_name
+- ask_about_esc_meraki_lanIp
+- ask_about_videos
+- quick_reply
+- charts
+- location
+- dropdown
 entities:
 - department_cyber
 - department_netsec
 - department_incubation
+- department_esc
+- department_msc
 - services_pdl
 - services_cyber
 - services_netsec
@@ -50,7 +60,6 @@ entities:
 - abb_pdl
 - abb_sdn
 - abb_ppm
-- department_esc
 - services_esc
 - details_pdl
 - details_ucc
@@ -70,24 +79,17 @@ slots:
     type: text
 responses:
   utter_sorry:
-  - text: 🐦 Oh!! Sorry to hear that. Next time I will learn some jokes.
-  utter_cheer_up:
-  - image: 🐦 https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+  - text:  Oh!! Sorry to hear that. Next time I will learn some jokes.
   utter_did_that_help:
-  - text: 🐦 Did that help you?
+  - text:  Did that help you?
   utter_goodbye:
-  - text: 🐦 Good Bye
-  - text: 🐦 Bye! Take care..Stay Home, Stay Safe
+  - text:  Good Bye
+  - text:  Bye! Take care..Stay Home, Stay Safe
   utter_getstarted1:
-  - text: 🐦 Welcome! I am ESC Chatbot, your virtual assistant
-  utter_getstarted2:
-  - text: 🐦 You can ask me [ESC] specific queries...
+  - text:  Welcome! I am CI-25 and can help you with ESC related queries..Say "Hello 👏" to start..
   utter_greet:
-  - text: 🐦 Hey! I can help you with- ?
+  - text:  Hey I am CI-25 and I can help you to get information on below domains-
     buttons:
-      - title: "Ask about ESC"
-        payload: "ask_about_esc"
       - title: "CyberSOC"
         payload: "ask_about_cybersoc_button"
       - title: "Network Security"
@@ -95,52 +97,54 @@ responses:
       - title: "Product Management"
         payload: "ask_about_ppm_button"
       - title: "SDN"
-        payload: "ask_about_sdn_button"
+        payload: "ask_about_Softwaredefinednetwork_button"
       - title: "PDL"
         payload: "ask_about_pdl_button"
       - title: "UCC"
         payload: "ask_about_ucc_button"
   utter_happy:
-  - text: 🐦 Great, carry on! 👍
-  - text: 🐦 Amazing! 👍👏
+  - text:  Great, carry on! 👍
+  - text:  Amazing! 👍👏
   utter_iamabot:
-  - text: 🐦 I am a virtual assistant, prepared by iYantra team for ESC domain
+  - text:  I am CI-25,a virtual assistant prepared by iYantra team for ESC domain
   utter_name:
-  - text: 🐦 My name is ESC assistant, Hope you like it
+  - text:  My name is CI-25, Hope you like it
   utter_ask_about_esc:
-  - text: 🐦 Expertise & Solution Centre (ESC) is the CSO expertise center & integrator
+  - text:  Expertise & Solution Centre (ESC) is the CSO expertise center & integrator
       reference point, supplementing FBO and IBO. It is responsible for providing
       our customers with end-to-end integration of their solutions and services.
   utter_ask_about_esc_contactcenter_services_action:
   - text: |
-              🐦 Contact Center supports -
+               Contact Center supports -
                 • Cisco Finesse
                 • NICE recording Solution.
   utter_default:
-  - text: 🐦 Sorry, I could not understand your meaning, can you please rephrase. It
+  - text:  Sorry, I could not understand your meaning, can you please rephrase. It
       will help me to learn 😕
   utter_ask_about_esc_manager_cybersoc:
-  - text: 🐦 Rohan Wadhwa(rohan.wadhwa@orange.com) is heading Cyber Soc operations with
+  - text:  Rohan Wadhwa(rohan.wadhwa@orange.com) is heading Cyber Soc operations with
       support of Raj Kumar (rajr.kumar@orange.com)
   utter_ask_about_esc_manager_networksecurity:
-  - text: 🐦 Pranay Sinha(pranay.sinha@orange.com) is heading Network Security Operations
+  - text:  Pranay Sinha(pranay.sinha@orange.com) is heading Network Security Operations
       with support of Ravi Kant (ravi.kant@orange.com)
   utter_ask_about_esc_manager_incubationcenter:
-  - text: 🐦 Naveen Rana (naveen.rana@orange.com) is heading Incubation Center in ESC
+  - text:  Naveen Rana (naveen.rana@orange.com) is heading Incubation Center in ESC
   utter_ask_about_esc_manager_esc:
-  - text: 🐦 Sanchita Biswas is heading ESC functions
+  - text:  Sanchita Biswas is heading [ESC] functions
+  utter_ask_about_esc_manager_msc:
+  - text:  Sandeep Murgai is heading MSC functions
   utter_ask_about_esc_ongoing_training:
-  - text: 🐦 At present, I do not know about any ongoing trainings due to COVID, but
+  - text:  At present, I do not know about any ongoing trainings due to COVID, but
       a few self learning activities like RPA, Python, Machine Learning is going on..
   utter_ask_about_esc_slm_objectives:
-  - text: 🐦 After a formal handover between Service Implementation Expert and Service
+  - text:  After a formal handover between Service Implementation Expert and Service
       Lifecycle Manager, analyze and control product KPIs and manage improvement loops
       with operational teams responsible for service delivery to customers (Sales,
       delivery, Customer Support, Billing, etc.) and with Marketing teams.
   utter_ask_about_esc_ucc_abbreviation:
-  - text: 🐦 UCC stands for Unified Collaboration and Communication
+  - text:  UCC stands for Unified Collaboration and Communication
   utter_ask_about_esc_ppm_abbreviation:
-  - text: 🐦 PPM stands for Product and Project Management
+  - text:  PPM stands for Product and Project Management
   utter_ask_about_esc_pdl_abbreviation:
   - text: 🐦 '{abb_pdl} stands for Product Development & LifeCycle'
   utter_ask_about_esc_slm_abbreviation:
@@ -150,7 +154,7 @@ responses:
   utter_ask_about_esc_sdn_abbreviation:
   - text: 🐦 '{abb_sdn} stands for Software Defined Network'
   utter_incomplete_question:
-  - text: 🐦 Sorry, Somehow I am not able to extract meaning from your query.. Please
+  - text:  Sorry, Somehow I am not able to extract meaning from your query.. Please
       try rephrasing it.. I am still learning
   utter_ask_about_esc_details_of_domains_pdl1:
   - text: 🐦 [Here are the details of PDL]
@@ -159,26 +163,27 @@ responses:
       UCC involves Large scale IPT deployment on DC and Cloud
       Objective is DESIGN - RUN -- BUILD the IPT solution
   utter_ask_about_cybersoc_button:
-  - text: 🐦 Please write your query related to CyberSOC
+  - text:  Please type more queries on Cybersoc..
   utter_ask_about_netsec_button:
-  - text: 🐦 Please write your query related to Network Security
+  - text:  Please type more queries on Network Security
   utter_ask_about_ppm_button:
-  - text: 🐦 Please write your query related to Product Management
+  - text: Please type more queries on Product Management
   utter_ask_about_sdn_button:
-  - text: 🐦 Please write your query related to Software defined Network
+  - text:  Please type more queries on Software defined Network
   utter_ask_about_pdl_button:
-  - text: 🐦 Please write your query related to Product Development & LifeCycle
+  - text:  Please type more queries on Product Development & LifeCycle
   utter_ask_about_ucc_button:
-  - text: 🐦 Please write your query related to Unified Collaboration and Comm.
+  - text: Please type more queries on Unified Collaboration and Comm.
+  utter_ask_about_esc_api_query:
+  - text:  Fetching Information....
 
 actions:
 - respond_chitchat
-- utter_cheer_up
+- ask_about_cheer_up
 - utter_did_that_help
 - utter_goodbye
 - utter_name
 - utter_getstarted1
-- utter_getstarted2
 - ask_about_esc_offerings_action
 - ask_about_esc_pdl_services_support_action
 - ask_about_esc_ppm_services_action
@@ -199,6 +204,7 @@ actions:
 - utter_ask_about_esc_manager_networksecurity
 - utter_ask_about_esc_manager_incubationcenter
 - utter_ask_about_esc_manager_esc
+- utter_ask_about_esc_manager_msc
 - ask_about_esc_ongoing_automation_projects_action
 - utter_ask_about_esc_ongoing_training
 - utter_ask_about_esc_slm_objectives
@@ -217,3 +223,10 @@ actions:
 - utter_ask_about_pdl_button
 - utter_ask_about_ucc_button
 - utter_ask_about_cybersoc_button
+- ask_about_esc_meraki_name
+- ask_about_esc_meraki_lanip
+- ask_about_chart
+- ask_about_quick_reply
+- ask_about_video
+- ask_about_location
+- ask_about_dropdown
