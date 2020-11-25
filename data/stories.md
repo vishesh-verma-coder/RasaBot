@@ -15,12 +15,12 @@
 ## Chatbot web socket get_started
 * get_started
  - utter_getstarted1
- - utter_getstarted2
+ 
 ## sad path 1
 * greet
   - utter_greet
-* mood_unhappy
-  - utter_cheer_up
+* mood_unhappy_path
+  - ask_about_cheer_up
   - utter_did_that_help
 * affirm
   - utter_happy
@@ -28,8 +28,8 @@
 ## sad path 2
 * greet
   - utter_greet
-* mood_unhappy
-  - utter_cheer_up
+* mood_unhappy_path
+  - ask_about_cheer_up
   - utter_did_that_help
 * deny
   - utter_goodbye
@@ -43,8 +43,8 @@
   - utter_iamabot
 
 ##sad path without greet
-* mood_unhappy
-  - utter_cheer_up
+* mood_unhappy_path
+  - ask_about_cheer_up
   - utter_did_that_help
 * affirm
   - utter_happy
@@ -52,8 +52,8 @@
 ## interactive_story_1
 * ask_question
     - utter_name
-* mood_unhappy
-    - utter_cheer_up
+* mood_unhappy_path
+    - ask_about_cheer_up
     - utter_did_that_help
 * deny
     - utter_goodbye
@@ -61,15 +61,15 @@
 ## Failed to Cheer-1
 * greet
     - utter_greet
-* mood_unhappy
-    - utter_cheer_up
+* mood_unhappy_path
+    - ask_about_cheer_up
     - utter_did_that_help
 * deny
     - utter_sorry
 
 ## Failed to cheer-2
-* mood_unhappy
-    - utter_cheer_up
+* mood_unhappy_path
+    - ask_about_cheer_up
     - utter_did_that_help
 * deny
     - utter_sorry
@@ -80,16 +80,31 @@
 
 ## Response to button clicks
 * ask_about_esc_cybersoc_button
+ - ask_about_esc_details_of_domains_cybersoc
+ - ask_about_esc_cybersoc_services_action
+ - utter_ask_about_esc_manager_cybersoc
  - utter_ask_about_cybersoc_button
 * ask_about_netsec_button
+ - about_esc_details_of_domains_netsec
+ - utter_ask_about_esc_manager_networksecurity
+ - ask_about_esc_networksoc_services_action
  - utter_ask_about_netsec_button
 * ask_about_ppm_button
+ - ask_about_esc_details_of_domains_ppm
+ - ask_about_esc_ppm_services_action
  - utter_ask_about_ppm_button
 * ask_about_sdn_button
+ - ask_about_esc_details_of_domains_sdn
+ - ask_about_esc_sdn_services_action
  - utter_ask_about_sdn_button
 * ask_about_pdl_button
+ - utter_ask_about_esc_details_of_domains_pdl1
+ - ask_about_esc_slm_activities_action
+ - ask_about_esc_pdl_services_support_action
  - utter_ask_about_pdl_button
 * ask_about_ucc_button
+ - utter_ask_about_esc_details_of_domains_ucc
+ - ask_about_esc_details_of_domains_ucc
  - utter_ask_about_ucc_button
  
 ##ask_about_esc
@@ -119,6 +134,7 @@
 ## Response about ESC Managers (Entity not provided)
 * ask_about_esc_manager
  - utter_default
+ 
 ## Response about ESC Managers
 * ask_about_esc_manager{"department_cyber": "CyberSOC"}
   - utter_ask_about_esc_manager_cybersoc
@@ -128,7 +144,19 @@
   - utter_ask_about_esc_manager_incubationcenter
 * ask_about_esc_manager{"department_esc": "ESC"}
   - utter_ask_about_esc_manager_esc
+* ask_about_esc_manager{"department_msc": "MSC"}
+  - utter_ask_about_esc_manager_msc
   
+## Response to Meraki Name API
+* ask_about_esc_meraki_name
+ - utter_ask_about_esc_api_query
+ - ask_about_esc_meraki_name
+
+## Response to Meraki LanIP
+* ask_about_esc_meraki_lanIp
+ - utter_ask_about_esc_api_query
+ - ask_about_esc_meraki_lanip
+ 
 ## Response to Abbreviations(Entity not provided)
 * ask_about_esc_abbreviations
  - utter_default
@@ -188,7 +216,7 @@
 ## Response to details of NetSEC
 * ask_about_esc_details_of_domains{"details_netsec": "NetSec"}
  - about_esc_details_of_domains_netsec
- - utter_ask_about_esc_manager_cybersoc
+ - utter_ask_about_esc_manager_networksecurity
  - ask_about_esc_networksoc_services_action
 ## Response to details of SDN
 * ask_about_esc_details_of_domains{"details_sdn": "SDN"}
@@ -197,6 +225,7 @@
 ## Response to details of ESC
 * ask_about_esc_details_of_domains{"details_esc": "ESC"}
  - utter_ask_about_esc_abbreviation
+ -ask_about_esc_details_of_domains_sdn
  - utter_ask_about_esc_manager_esc
  - ask_about_esc_offerings_action
 
@@ -208,4 +237,23 @@
 * ask_about_esc_plazza_and_esc_portalpage
  - ask_about_esc_plazza_and_esc_portalpage_action
  
+##Response to videos
+* ask_about_videos
+ - ask_about_video
+ 
+##Response to quick reply
+* quick_reply
+ - ask_about_quick_reply
+ 
+##Response to charts
+* charts
+ - ask_about_chart
+ 
+##Response to location
+*location
+ - ask_about_location
+ 
+##Response to dropdown
+* dropdown
+ - ask_about_dropdown
  

@@ -1,7 +1,7 @@
 ## chitchat
 * chitchat/ask_builder 
-  -  One of the smart engineers at Rasa! 🧠
-  -  The engineers at Rasa 🛠
+  -  ESC dev team... They are smart! 🧠
+  -  The engineers at ESC - OBS  🛠
 
 ## chitchat
 * chitchat/ask_howbuilt 

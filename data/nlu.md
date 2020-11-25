@@ -253,7 +253,7 @@
 #- whats new
 #- whatsapp
 #- yow are you
-#- how are you Rasa
+#- how are you Bot
 #- Hey Sara, how's it going
 #- are you cool
 
@@ -968,14 +968,34 @@
 #- telljoke
 
 ## intent:how_can_you_help
-- How can you help me!
-- What can you do for me!
-- you capable of 
-- what have you learnt
-- how trained are you
-- What I expect from you
-- Show me what you can do
-- how can you assist me
+#- How can you help me!
+#- What can you do for me!
+#- you capable of 
+#- what have you learnt
+#- how trained are you
+#- What I expect from you
+#- Show me what you can do
+#- how can you assist me
+
+## intent:ask_about_videos
+- any video
+- show me a video
+- video
+
+## intent:quick_reply
+- quick reply
+
+##intent:charts
+- chart info
+- chart
+
+##intent:location
+- location info
+- location
+
+##intent:dropdown
+- dropdown
+- DropDown 
 
 ## intent:greet
 
@@ -992,6 +1012,11 @@
 - Hello
 - Hello Bot
 - Hello!
+- assist me
+- help me
+- help
+- What you are capable of
+- ability 
 - Hey
 - Hey bot
 - Heya
@@ -1474,7 +1499,7 @@
 - I am great
 - I'm good
 
-## intent:mood_unhappy
+## intent:mood_unhappy_path
 - I am feeling bad
 - I am sad
 - I am super sad
@@ -1533,6 +1558,7 @@
 - Can I know your name
 - How can I call you
 
+
 ## intent:ask_about_esc_cybersoc_button
 - ask_about_cybersoc_button
 ## intent:ask_about_netsec_button
@@ -1540,18 +1566,18 @@
 ## intent:ask_about_ppm_button
 - ask_about_ppm_button
 ## intent:ask_about_sdn_button
-- ask_about_sdn_button
+- ask_about_Softwaredefinednetwork_button
 ## intent:ask_about_pdl_button
 - ask_about_pdl_button
 ## intent:ask_about_ucc_button
 - ask_about_ucc_button
+## intent:ask_about_esc_button
+- ask_about_esc_button
 
 ## intent:ask_about_esc
-- What is ESC?
 - What is ESC
 - What's ESC?
 - What do you mean by ESC?
-- What do you understand from ESC?
 - about ESC?
 
 ## intent:ask_about_esc_abbreviations
@@ -1659,21 +1685,27 @@
 - manager of [CyberSOC](department_cyber)
 - manager [CyberSOC](department_cyber) 
 - Who is responsible for all functions in [CyberSecurity](department_cyber)
+- head of [CyberSecurity](department_cyber)
 - Who is manager of [Netsec](department_netsec)
 - manager of [Netsec](department_netsec)
 - manager [Netsec](department_netsec)
 - Who is heading [NetworkSecurity](department_netsec) 
 - Who is responsible for all functions in [NetworkSecurity](department_netsec)
+- head of [NetworkSecurity](department_netsec)
 - Who is manager of [IncubationCenter](department_incubation)
 - manager of [IncubationCenter](department_incubation) 
 - manager [IncubationCenter](department_incubation) 
 - Who is heading [IncubationCenter](department_incubation)
-- Who is responsible for all functions in [IncubationCenter](department_incubation) 
+- Who is responsible for all functions in [IncubationCenter](department_incubation)
+- head of [IncubationCenter](department_incubation)
 - Who is manager of [ESC](department_esc)
 - Who is heading [ESC](department_esc)
+- head of [ESC](department_esc)
 - manager of [ESC](department_esc) team? 
 - manager [ESC](department_esc) team?
 - Who is responsible for all functions in [ESC](department_esc)?
+- Who is heading [MSC](department_msc)
+- head of [MSC](department_msc)
 
 ## intent:ask_about_esc_ongoing_automation_projects
 - What are ongoing automation projects in ESC?
@@ -1713,10 +1745,12 @@
 - Can you explain [PDL](details_pdl)
 - explain [PDL](details_pdl)
 - comprehensively explain [PDL](details_pdl)
+- What is [PDL](details_pdl)
 - I want to know about [UCC](details_ucc)
 - Can you tell me about [UCC](details_ucc) in detail
 - What is [Unified Communication]{"entity":"details_ucc", "value":"UCC"}
 - Can you elaborate [UCC](details_ucc)
+- What is [UCC](details_ucc)
 - elaborate [UCC](details_ucc)
 - details of [UCC](details_ucc)
 - Can you explain [UCC](details_ucc)
@@ -1724,6 +1758,7 @@
 - comprehensively explain [UCC](details_ucc)
 - I want to know about [PPM](details_ppm)
 - Can you tell me about [PPM](details_ppm) in detail
+- What is [PPM](details_ppm)
 - What is [Program Management]{"entity":"details_ppm", "value":"PPM"}
 - What is [Project Management]{"entity":"details_ppm", "value":"PPM"}
 - What is [Program and Project Management]{"entity":"details_ppm", "value":"PPM"}
@@ -1737,6 +1772,7 @@
 - Can you tell me about [CyberSOC](details_cybersoc) in detail
 - What is [Cyber Security]{"entity":"details_cybersoc", "value":"CyberSOC"}
 - Can you elaborate [CyberSOC](details_cybersoc)
+- What is [CyberSOC](details_cybersoc)
 - elaborate [CyberSOC](details_cybersoc)
 - details of [CyberSOC](details_cybersoc)
 - Can you explain [CyberSOC](details_cybersoc)
@@ -1746,6 +1782,7 @@
 - Can you tell me about [NetSec](details_netsec) in detail
 - What is [Network Security]{"entity":"details_netsec", "value":"NetSec"}
 - Can you elaborate [NetSec](details_netsec)
+- What is [NetSec](details_netsec)
 - elaborate [NetSec](details_netsec)
 - details of [NetSec](details_netsec)
 - Can you explain [NetSec](details_netsec)
@@ -1753,6 +1790,7 @@
 - comprehensively explain [NetSec](details_netsec)
 - I want to know about [SDN](details_sdn)
 - Can you tell me about [SDN](details_sdn) in detail
+- What is [SDN](details_sdn)
 - What is [SD-WAN]{"entity":"details_sdn", "value":"SDN"}
 - Can you elaborate [SDN](details_sdn)
 - elaborate [SDN](details_sdn)
@@ -1790,6 +1828,20 @@
 - portal
 - What is ESC portal link
 
+##intent:ask_about_esc_meraki_name
+- appliances name
+- Meraki names 
+- names of Meraki appliances
+
+##intent:ask_about_esc_meraki_lanIp
+- lanIp
+- LAN ip
+- lan ip address
+- ip address
+- fetch Meraki ip scheme 
+- Meraki IP Address
+- IP Address
+
 ## synonym:CyberSOC
  - CyberSecurity
  - Cyber
@@ -1802,6 +1854,11 @@
  - Software defined Network
  - SD-WAN
  - SD WAN
+ 
+## synonym:SD-WAN
+ - Software defined Network
+ - SDN
+
 ##synonym:UCC
 - Unified Communication Collaboration
 - Unified Comm
